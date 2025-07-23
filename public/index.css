@@ -2,6 +2,8 @@ body , html {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+    height: 100%;
+
 }
 
 nav {
@@ -21,4 +23,35 @@ nav > a {
     border: 2px solid black;
     text-align: center;
     border-radius: 10px;
+}
+
+
+.container {
+    height:  100%;
+    width: 100%;
+    background-color: rgb(200, 205, 208);
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+
+.container .card {
+    height: 400px;
+    width: 300px;
+    border: 2px solid black;
+    object-fit: cover;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+.card .top {
+    height: 50%;
+    width: 100%;
+    text-align: center;
+}
+.container .card img {
+    height: 100%;
+
 }
