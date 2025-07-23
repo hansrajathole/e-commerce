@@ -5,7 +5,7 @@ const router = express.Router()
 
 router.get("/", async(req, res)=>{
    const products = await productModel.find()
-   console.log("products :" , products);
+//    console.log("products :" , products);
    
     res.render("index.ejs",{products : products, title : "home page"})
 })
