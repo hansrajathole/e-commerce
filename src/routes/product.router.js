@@ -10,6 +10,17 @@ router.get("/", (req, res) => {
   res.render("productForm");
 });
 
+router.get("/:id",async (req, res)=>{
+    const productId = req.params.id
+
+    const product = await productModel.findById(productId)
+
+    console.log(product);
+
+    res.send("data aaya")
+    
+})
+
 router.post("/add", upload.single("image"), async (req, res) => {
 //   console.log("file data", req.file);
 

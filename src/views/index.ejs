@@ -14,13 +14,15 @@
     <div class="container">
        
 
+        /products/68809efc486bbf632b35083f
+
     <% products.forEach(elem => { %>
          <div class="card">
             <div class="top">
                 <img src="<%= elem.image %>" alt="imge">
             </div>
             <div class="bottom">
-                <h3><%= elem.title %></h3>
+                <a href="/products/<%= elem._id %>"><h3><%= elem.title %></h3></a>
                 <p><%= elem.description %></p>
                 <p><%= elem.price %></p>
             </div>
