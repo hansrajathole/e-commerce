@@ -6,9 +6,17 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 const router = express.Router();
 
+
+router.use((req, res, next )=>{
+    req.name = "Hanshya"
+
+    next()
+})
+
 router.get("/", (req, res) => {
   res.render("productForm");
 });
+
 
 router.get("/:id",async (req, res)=>{
     const productId = req.params.id
@@ -118,5 +126,6 @@ router.post("/add", upload.single("image"), async (req, res) => {
 
   res.redirect("/");
 });
+
 
 module.exports = router;
